@@ -1,11 +1,19 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://hud/defense/Turrets-Overlay.tscn" type="PackedScene" id=1]
-[ext_resource path="res://hud/industry/Industry-Overlay.tscn" type="PackedScene" id=2]
-[ext_resource path="res://hud/Stats.tscn" type="PackedScene" id=3]
-[ext_resource path="res://live/fort/Fortress.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://hud/Stats.tscn" type="PackedScene" id=2]
+[ext_resource path="res://live/fort/Fortress.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Workforce.gd" type="Script" id=4]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = Vector2Array( 257.143, 166.571, 413.586, 154.328, 613.561, 161.13, 591.795, 182.896, 451.677, 241.392, 412.226, 229.149, 644.85, 212.824, 838.023, 177.454, 903.321, 182.896, 1169.95, 208.743, 1114.18, 263.158, 997.187, 263.158, 836.662, 256.356, 714.229, 235.95, 81.2767, -17.9515, 1256.22, 2.92005, 956.654, 33.6135, 887.901, 79.0398, 943.149, 88.8617, 858.428, 133.922, 760.481, 86.3093, 726.472, 65.9037, 360.531, 148.886, 741.436, 289.005, 823.059, 291.726, 862.51, 310.771, 219.053, 333.897, 348.288, 310.771, 518.335, 301.248, 175.521, 48.2188, 157.836, 69.9848, 82.5046, 56.9405, -77.509, 261.798, 104.781, 138.003, 232.656, 63.1829, 242.179, 121.679, 209.53, 192.418, 95.2586, 231.869, 993.105, 362.465, 653.402, 361.419, 38.306, 357.736, 1257.45, 140.427, 1266.04, 227.596, 1256.22, 297.577, 1148.19, 284.924, 1040.72, 165.211, 1035.28, 113.517, 1139.59, 114.644, 1013.51, 144.805, 299.315, 245.473, 292.513, 308.05, 229.936, 294.447, 142.872, 261.797, 99.3397, 279.482, 168.719, 325.735, 1254.99, 76.5843, 1202.2, 64.3069, 1089.25, 64.3069, 1032.56, 308.05, 1269.73, 373.697, 1247.63, 441.222, 1067.15, 463.322, 841.246, 403.163, 378.216, 94.4715, 590.435, 274.041, 697.904, 287.645, 708.787, 117.598, 560.506, 110.796, 510.173, 102.634, 541.461, 75.4263, 73.4926, 108.075, 5.15712, 102.367, 63.97, 142.085, 521.056, 244.113, -127.843, 170.652, -125.122, -15.7188, -27.1751, -63.3318, -4.66478, 43.4354, 13.7511, 421.579, -59.9131, 392.113, -13.2589, 344.231, 431.271, 283.564, 728.294, 377.38, 530.629, 376.152, 413.994, 389.657, 314.547, 419.123, 179.496, 435.084, 75.138, 421.579, 3.9294, 284.072 )
+polygons = [ IntArray( 0, 1, 2, 3, 4, 5 ), IntArray( 6, 7, 8, 9, 10, 11, 12, 13 ), IntArray( 14, 15, 16 ), IntArray( 17, 18, 19, 20, 21 ), IntArray( 22, 1, 0 ), IntArray( 23, 24, 25, 26, 27, 28 ), IntArray( 14, 16, 17, 21 ), IntArray( 29, 30, 31, 14 ), IntArray( 32, 33, 34, 35, 36, 37 ), IntArray( 11, 38, 25, 12 ), IntArray( 25, 38, 39, 40, 26 ), IntArray( 9, 41, 42, 43, 44 ), IntArray( 41, 9, 45, 46, 47 ), IntArray( 45, 9, 8 ), IntArray( 48, 45, 8 ), IntArray( 49, 50, 51, 52, 37, 36 ), IntArray( 53, 52, 51, 54, 40 ), IntArray( 15, 55, 56 ), IntArray( 16, 15, 56, 57 ), IntArray( 46, 18, 16, 57, 47 ), IntArray( 58, 44, 43, 59, 60, 61, 38 ), IntArray( 10, 44, 58, 11 ), IntArray( 26, 51, 50 ), IntArray( 38, 61, 62 ), IntArray( 63, 22, 0, 35, 34 ), IntArray( 64, 13, 65, 28 ), IntArray( 56, 55, 41, 47 ), IntArray( 18, 46, 48, 8, 19 ), IntArray( 20, 19, 7, 6, 66 ), IntArray( 66, 6, 2 ), IntArray( 67, 21, 66, 2, 1 ), IntArray( 68, 67, 1, 63 ), IntArray( 21, 67, 69 ), IntArray( 14, 21, 69, 34, 29 ), IntArray( 34, 69, 68, 63 ), IntArray( 30, 34, 33 ), IntArray( 31, 30, 33, 70 ), IntArray( 71, 31, 70, 72, 32 ), IntArray( 12, 24, 23, 13 ), IntArray( 4, 6, 13, 73 ), IntArray( 3, 6, 4 ), IntArray( 32, 74, 75, 76, 77, 71 ), IntArray( 78, 79, 32, 80 ), IntArray( 36, 0, 5, 81, 49 ), IntArray( 13, 64, 73 ), IntArray( 4, 73, 28, 81 ), IntArray( 14, 31, 77, 76 ), IntArray( 32, 72, 33 ), IntArray( 38, 62, 82 ), IntArray( 26, 50, 27 ), IntArray( 38, 82, 39 ), IntArray( 40, 39, 83, 84 ), IntArray( 40, 84, 85, 86, 87 ), IntArray( 40, 87, 78, 80 ), IntArray( 88, 80, 32 ), IntArray( 54, 26, 40 ), IntArray( 53, 40, 88, 37 ), IntArray( 37, 88, 32 ), IntArray( 27, 49, 81 ), IntArray( 27, 81, 28 ), IntArray( 23, 28, 65 ) ]
+outlines = [ Vector2Array( 81.2767, -17.9515, 1256.22, 2.92005, 1254.99, 76.5843, 1257.45, 140.427, 1266.04, 227.596, 1256.22, 297.577, 1269.73, 373.697, 1247.63, 441.222, 1067.15, 463.322, 841.246, 403.163, 728.294, 377.38, 653.402, 361.419, 530.629, 376.152, 413.994, 389.657, 314.547, 419.123, 179.496, 435.084, 75.138, 421.579, 13.7511, 421.579, -59.9131, 392.113, -77.509, 261.798, -127.843, 170.652, -125.122, -15.7188, -27.1751, -63.3318 ), Vector2Array( 63.97, 142.085, 73.4926, 108.075, 104.781, 138.003 ), Vector2Array( 99.3397, 279.482, 95.2586, 231.869, 142.872, 261.797 ), Vector2Array( 209.53, 192.418, 242.179, 121.679, 257.143, 166.571 ), Vector2Array( 157.836, 69.9848, 232.656, 63.1829, 175.521, 48.2188 ), Vector2Array( 168.719, 325.735, 229.936, 294.447, 219.053, 333.897 ), Vector2Array( 292.513, 308.05, 299.315, 245.473, 348.288, 310.771 ), Vector2Array( 360.531, 148.886, 413.586, 154.328, 378.216, 94.4715 ), Vector2Array( 412.226, 229.149, 431.271, 283.564, 451.677, 241.392 ), Vector2Array( 518.335, 301.248, 521.056, 244.113, 590.435, 274.041 ), Vector2Array( 560.506, 110.796, 510.173, 102.634, 541.461, 75.4263 ), Vector2Array( 591.795, 182.896, 613.561, 161.13, 644.85, 212.824 ), Vector2Array( 708.787, 117.598, 726.472, 65.9037, 760.481, 86.3093 ), Vector2Array( 697.904, 287.645, 714.229, 235.95, 741.436, 289.005 ), Vector2Array( 823.059, 291.726, 836.662, 256.356, 862.51, 310.771 ), Vector2Array( 838.023, 177.454, 858.428, 133.922, 903.321, 182.896 ), Vector2Array( 1013.51, 144.805, 1035.28, 113.517, 1040.72, 165.211 ), Vector2Array( 1032.56, 308.05, 993.105, 362.465, 997.187, 263.158 ), Vector2Array( 1114.18, 263.158, 1148.19, 284.924, 1169.95, 208.743 ), Vector2Array( 887.901, 79.0398, 956.654, 33.6135, 943.149, 88.8617 ), Vector2Array( 1139.59, 114.644, 1202.2, 64.3069, 1089.25, 64.3069 ), Vector2Array( 38.306, 357.736, 3.9294, 284.072, -13.2589, 344.231 ), Vector2Array( 5.15712, 102.367, 82.5046, 56.9405, -4.66478, 43.4354 ) ]
 
 [node name="Game" type="Node2D"]
+
+script/script = ExtResource( 1 )
 
 [node name="Hud" type="Control" parent="."]
 
@@ -18,16 +26,31 @@ margin/top = 0.0
 margin/right = 40.0
 margin/bottom = 40.0
 
-[node name="Turrets-Overlay" parent="Hud" instance=ExtResource( 1 )]
-
-[node name="Industry-Overlay" parent="Hud" instance=ExtResource( 2 )]
-
-[node name="Stats" parent="Hud" instance=ExtResource( 3 )]
+[node name="Stats" parent="Hud" instance=ExtResource( 2 )]
 
 [node name="Live" type="Node2D" parent="."]
 
-[node name="Fortress" parent="Live" instance=ExtResource( 4 )]
+[node name="Fortress" parent="Live" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 640, 400 )
+transform/pos = Vector2( 640, 542 )
+
+[node name="assaultTime" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = true
+autostart = false
+
+[node name="Zone" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Zone"]
+
+transform/pos = Vector2( 34.6078, 1.79233 )
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="Workforce" type="Node" parent="."]
+
+script/script = ExtResource( 4 )
 
 
