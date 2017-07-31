@@ -5,7 +5,7 @@ var targeting = RayCast2D.new()
 
 var target = Vector2(0,0)
 var movement = Vector2(0,0)
-var speed = 300
+var speed = 200
 var xMin = 140
 var xMax = 1000
 var yMin = 0
@@ -29,6 +29,12 @@ func _fixed_process(delta):
 		var angle = get_angle_to(path[path.size()-2])
 		movement.x = speed*sin(angle)           
 		movement.y = speed*cos(angle)
+		if (movement.y > 50):
+			get_node("AnimatedSprite").set_animation("down")
+		elif (movement.y < -50):
+			get_node("AnimatedSprite").set_animation("up")
+		else:
+			get_node("AnimatedSprite").set_animation("idle")
 		move(movement*delta)
 		
 		#shooting
@@ -46,11 +52,11 @@ func _fixed_process(delta):
 		path.invert()
 
 func explodes():
-	get_node("Sprite").set_hidden(true);
+	get_node("AnimatedSprite").set_hidden(true);
 	var dies = expl.instance();
 	dies.set_pos(get_global_pos())
-	get_tree().get_root().add_child(dies)
-	queue_free()
+	get_tree().get_root().get_node("Game/Gaem").add_child(dies)
+	call_deferred("queue_free")
 	
 func reloadDone():
 	print("TEMPO")
@@ -63,4 +69,4 @@ func bombsAway():
 	get_node("reloadTime").start()
 	var b = bomb.instance()
 	b.set_pos(get_global_pos())
-	get_tree().get_root().add_child(b)
+	get_tree().get_root().get_node("Game/Gaem").add_child(b)

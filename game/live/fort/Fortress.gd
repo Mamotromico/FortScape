@@ -3,17 +3,16 @@ extends Node2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+signal updateDurability
 
 var durability = 200
+var speed = 100
+var energy = 50
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	set_process(true)
 	set_process_input(true)
-	
-func _process(delta):
-	pass
 	
 func _input(event):
 	if(event.is_action_pressed("Defense_Overlay")):
@@ -21,6 +20,7 @@ func _input(event):
 		
 func explodes():
 	durability -= 8
+	emit_signal("updateDurability",durability)
 	if(durability <= 0):
-		print("gameover")
+		get_tree().change_scene("res://GameOver")
 	

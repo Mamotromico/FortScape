@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://font/DPSDbeyond.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 120
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 1 )
+
+[node name="GamOver" type="Node2D"]
+
+[node name="ColorFrame" type="ColorFrame" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1280.0
+margin/bottom = 720.0
+color = Color( 0.207843, 0.137255, 0.137255, 1 )
+
+[node name="Label" type="Label" parent="ColorFrame"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 352.0
+margin/top = 300.0
+margin/right = 928.0
+margin/bottom = 420.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.658824, 0.156863, 1 )
+text = "GameOver"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://live/mountainview.png" type="Texture" id=1]
+[ext_resource path="res://mountaines.gd" type="Script" id=2]
+
+[node name="montaines" type="Sprite"]
+
+transform/pos = Vector2( 0, 217.388 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 0, 2560, 400 )
+script/script = ExtResource( 2 )
+
+

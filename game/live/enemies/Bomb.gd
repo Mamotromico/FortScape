@@ -32,5 +32,5 @@ func explodes():
 	get_node("Sprite").set_hidden(true)
 	var dies = expl.instance()
 	dies.set_pos(get_global_pos())
-	get_tree().get_root().add_child(dies)
+	get_tree().get_root().get_node("Game/Gaem").add_child(dies)
 	queue_free()

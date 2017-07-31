@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://live/ground.png" type="Texture" id=1]
+[ext_resource path="res://groundes.gd" type="Script" id=2]
+
+[node name="groundes" type="Sprite"]
+
+transform/pos = Vector2( 0, 469.883 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 0, 2560, 250 )
+script/script = ExtResource( 2 )
+
+

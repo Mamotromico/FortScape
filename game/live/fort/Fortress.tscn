@@ -130,6 +130,30 @@ polygon = Vector2Array( -292.984, 75.0109, -323.123, 22.0843, -340.765, -39.6634
 shape_range = Vector2( 0, 4 )
 trigger = false
 
+[node name="IndustryOverlay" type="Node2D" parent="."]
+
+[node name="Energy" type="Control" parent="IndustryOverlay"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Repair" type="Control" parent="IndustryOverlay"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
 
 [editable path="TurretOverlay/T1"]
 [editable path="TurretOverlay/T2"]
